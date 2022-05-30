@@ -1,0 +1,910 @@
+/* --------------------------------------------------------------- Common Use Css */
+
+* {
+  font-family: "montserrat";
+  color: rgb(254, 95, 85);
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  background-color: black;
+  background-image: url(../assets/Body.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+.logoImg {
+  width: 6rem;
+  height: 8rem;
+}
+
+.headerA {
+  font-size: 2rem;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  border-right: 0.1rem solid white;
+  padding: 0 2.5rem;
+}
+
+.headerA:last-child {
+  border: none;
+}
+
+.headerA {
+  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+  transition: text-decoration-color 300ms;
+}
+
+.headerA:hover {
+  text-decoration-color: white;
+}
+
+.logoImg,
+.links,
+.socials {
+  align-self: center;
+}
+
+.socials {
+  display: flex;
+}
+
+.socialIcon {
+  height: 5.5rem;
+  width: 5.5rem;
+}
+
+h1 {
+  font-size: 6.4rem;
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.4rem;
+  color: white;
+}
+
+h4 {
+  font-size: 1.6rem;
+  color: white;
+}
+
+footer {
+  display: flex;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: white;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerImg {
+  width: 3rem;
+  height: 4rem;
+  margin: 0rem 2rem;
+}
+
+.boldSpan {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* --------------------------------------------------------------- Common Use Css */
+
+/* ------------------------------------------------------- Index Grid declaration */
+
+.indexGridContainer {
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 1fr 1fr 0.1fr;
+  gap: 2rem 1rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "navBar navBar"
+    "title title"
+    "heroSection heroSection"
+    "subSection subSection"
+    "footer footer";
+}
+
+.navBar {
+  grid-area: navBar;
+}
+
+.title {
+  grid-area: title;
+}
+
+.heroSection {
+  grid-area: heroSection;
+}
+
+.subSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0rem 0rem;
+  grid-auto-flow: row;
+  grid-template-areas: "img2 text2";
+  grid-area: subSection;
+}
+
+.img2 {
+  display: flex;
+  grid-area: img2;
+}
+
+.text2 {
+  display: flex;
+  grid-area: text2;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* ------------------------------------------------------- Index Grid declaration */
+
+/* ----------------------------------------------------------- >1024px Index Grid */
+
+@media (max-width: 1023px) {
+  * {
+    font-family: "montserrat";
+    color: rgb(254, 95, 85);
+    font-size: 56.25%; /* 1rem = 9px */
+  }
+
+  .navBar {
+    grid-area: navBar;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headerA {
+    border: none;
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    grid-area: title;
+  }
+
+  .heroSection {
+    grid-area: heroSection;
+  }
+
+  .subSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0rem 0rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "img2 img2"
+      "text2 text2";
+    grid-area: subSection;
+  }
+
+  .img2 {
+    display: flex;
+    max-width: 90%;
+    margin: auto;
+    justify-content: center;
+    grid-area: img2;
+  }
+
+  .subImg {
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 0.5rem solid white;
+    border-radius: 1rem;
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  .text2 {
+    text-align: center;
+    display: flex;
+    grid-area: text2;
+  }
+
+  .text2 .subText {
+    padding: 1rem;
+    margin-left: 0rem;
+  }
+
+  /* ---------------------------------------------------------- >768px Index Grid */
+
+  footer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  * {
+    font-size: 50%; /* 1rem = 8px */
+  }
+}
+
+/* ------------------------------------------------------------ >768px Index Grid */
+
+/* -------------------------------------------------------------------- Index CSS */
+
+.heroSection {
+  text-align: center;
+}
+
+.heroImg {
+  display: flex;
+  border-radius: 2rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("../assets/1\ Index.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.heroText {
+  background-color: rgba(0, 0, 0, 0.603);
+  color: white;
+  align-self: flex-end;
+  padding: 1rem;
+  font-size: 2.6rem;
+  line-height: 3rem;
+}
+
+.subImg {
+  max-width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 0.5rem solid white;
+  border-radius: 1rem;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.subText {
+  background-color: rgba(0, 0, 0, 0.459);
+  align-self: center;
+  margin-left: 4rem;
+  font-size: 2rem;
+  line-height: 4rem;
+}
+
+/* -------------------------------------------------------------------- Index CSS */
+
+/* ------------------------------------------------------------- Institution Grid */
+
+.institutionGridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 1fr 0.2fr 0.1fr 1fr 0.1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "navBar navBar"
+    "title title"
+    "aulasPhotos aulasPhotos"
+    "aulasText aulasText"
+    "programTitle programTitle"
+    "studyProgram studyProgram"
+    "footer footer";
+}
+
+.navBar {
+  grid-area: navBar;
+}
+
+.title {
+  grid-area: title;
+}
+
+.aulasPhotos {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "photo1 photo2";
+  grid-area: aulasPhotos;
+}
+
+.imgAula{
+  width: 80%;
+  height: 80%;
+}
+
+.aulasText {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  grid-area: aulasText;
+}
+
+.programTitle {
+  grid-area: programTitle;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+#studyProgram {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  gap: 1rem 1rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "bigSquare1 bigSquare2"
+    "smallSquare1 smallSquare2";
+  grid-area: studyProgram;
+}
+
+.bigSquare1 {
+  grid-area: bigSquare1;
+}
+
+.bigSquare2 {
+  grid-area: bigSquare2;
+}
+
+.smallSquare1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0rem 1rem;
+  grid-auto-flow: row;
+  grid-template-areas: "fgt ea";
+  grid-area: smallSquare1;
+}
+
+.fgt {
+  grid-area: fgt;
+}
+
+.ea {
+  grid-area: ea;
+}
+
+.smallSquare2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 1rem;
+  grid-auto-flow: row;
+  grid-template-areas: "basic tutor";
+  grid-area: smallSquare2;
+}
+
+.basic {
+  grid-area: basic;
+}
+
+.tutor {
+  grid-area: tutor;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* ------------------------------------------------------------- Institution Grid */
+
+/* ----------------------------------------------------- >1024px Institution Grid */
+
+@media (max-width: 1023px) {
+
+  .institutionGridContainer{
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.1fr 0.1fr;
+  }
+
+  .aulasPhotos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+
+  #studyProgram {
+    display: grid;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    gap: 1rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "bigSquare1 bigSquare1"
+      "bigSquare2 bigSquare2"
+      "smallSquare1 smallSquare1"
+      "smallSquare2 smallSquare2";
+    grid-area: studyProgram;
+  }
+
+  .bigSquare1,
+  .bigSquare2 {
+    max-width: 100%;
+  }
+
+  .smallSquare1,
+  .smallSquare2 {
+    justify-content: center;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
+
+/* ----------------------------------------------------- >1024px Institution Grid */
+
+/* ------------------------------------------------------ >768px Institution Grid */
+
+@media (max-width: 767px) {
+  * {
+    font-size: 50%; /* 1rem = 8px */
+  }
+
+  #studyProgram {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+/* ------------------------------------------------------ >768px Institution Grid */
+
+/* -------------------------------------------------------------- Institution CSS */
+
+
+.imgAula {
+  max-width: 90%;
+  padding: 1rem;
+  border: 0.5rem solid white;
+  border-radius: 1rem;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.aulasText {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 0.5rem solid white;
+  border-top: 0;
+  border-bottom: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.bigSquareDescription,
+.smallSquareDescription {
+  font-size: 2rem;
+}
+
+/* -------------------------------------------------------------- Institution CSS */
+
+/* ------------------------------------------------------------------- Games Grid */
+
+.gamesGridContainer {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 1fr 1fr 0.1fr;
+  gap: 1rem 2rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "navBar navBar"
+    "title title"
+    "moba fps"
+    "rts fighting"
+    "footer footer";
+}
+
+.navBar {
+  width: 100%;
+  grid-area: navBar;
+}
+
+.title {
+  grid-area: title;
+}
+
+.moba {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1.8fr 0.1fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "gamingTitle"
+    "mobaVideo"
+    "videoDescription";
+  grid-area: moba;
+}
+
+.gamingTitle {
+  grid-area: gamingTitle;
+}
+
+.mobaVideo {
+  grid-area: mobaVideo;
+}
+
+.videoDescription {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-area: videoDescription;
+}
+
+.fps {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1.8fr 0.1fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "gamingTitle"
+    "fpsVideo"
+    "videoDescription";
+  grid-area: fps;
+}
+
+.gamingTitle {
+  grid-area: gamingTitle;
+}
+
+.fpsVideo {
+  grid-area: fpsVideo;
+}
+
+.videoDescription {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-area: videoDescription;
+}
+
+.rts {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1.8fr 0.1fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "gamingTitle"
+    "rtsVideo"
+    "videoDescription";
+  grid-area: rts;
+}
+
+.gamingTitle {
+  grid-area: gamingTitle;
+}
+
+.rtsVideo {
+  grid-area: rtsVideo;
+}
+
+.videoDescription {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-area: videoDescription;
+}
+
+.fighting {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1.8fr 0.1fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "gamingTitle"
+    "fightingVideo"
+    "videoDescription";
+  grid-area: fighting;
+}
+
+.gamingTitle {
+  grid-area: gamingTitle;
+}
+
+.fightingVideo {
+  grid-area: fightingVideo;
+}
+
+.videoDescription {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-area: videoDescription;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* ------------------------------------------------------------------- Games Grid */
+
+/* ----------------------------------------------------------- >1024px Games Grid */
+
+@media (max-width: 1023px) {
+  .gamesGridContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links {
+    align-items: flex-start;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
+/* ----------------------------------------------------------- >1024px Games Grid */
+
+/* ------------------------------------------------------------ >768px Games Grid */
+
+@media (max-width: 767px) {
+  * {
+    font-size: 50%; /* 1rem = 8px */
+  }
+
+  .mobaVideo,
+  .fpsVideo,
+  .rtsVideo,
+  .fightingVideo {
+    max-width: 100%;
+  }
+}
+
+/* ------------------------------------------------------------ >768px Games Grid */
+
+/* -------------------------------------------------------------------- Games CSS */
+
+.video {
+  border-radius: 5rem;
+  border: 0.3rem solid white;
+  border-left: 1rem double;
+  border-right: 1rem double;
+  padding: 2rem;
+}
+
+.videoDescription {
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 2rem;
+}
+
+/* ---------------------------------------------------------------- Packages Grid */
+
+.packagesGridContainer {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 0.2fr 1fr 0.1fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "navBar"
+    "title"
+    "packages"
+    "footer";
+}
+
+.navBar {
+  grid-area: navBar;
+}
+
+.packages {
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.5);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0rem 2rem;
+  grid-auto-flow: row;
+  grid-template-areas: 
+  "packSatelite packTryhard packPro";
+  grid-area: packages;
+}
+
+.packSatelite {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: packSatelite;
+}
+
+.packTryhard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: packTryhard;
+}
+
+.packPro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: packPro;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* ---------------------------------------------------------------- Packages Grid */
+
+/* -------------------------------------------------------- >1024px Packages Grid */
+
+@media (max-width: 1023px) {
+  .packages {
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.3);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0rem 2rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "packSatelite"
+      "packTryhard"
+      "packPro";
+    grid-area: packages;
+  }
+
+}
+
+/* -------------------------------------------------------- >1024px Packages Grid */
+
+/* ----------------------------------------------------------------- Packages CSS */
+
+.packagesLink {
+  text-decoration: none;
+}
+
+.cardsText {
+  font-size: 2rem;
+}
+
+.cardsButton {
+  max-width: 35%;
+  border: 0.3rem solid white;
+  border-radius: 1rem;
+  border-top: 0;
+  border-bottom: 0;
+  padding: 1rem;
+  opacity: 0.6;
+  cursor: not-allowed;
+  letter-spacing: 1.5px;
+}
+
+.packTryhard {
+background-color: rgba(0, 0, 0, 0.6);
+}
+
+.packSatelite, .packTryhard, .packPro {
+  border-radius: 5rem;
+  border: 0.3rem solid white;
+  border-left: 1rem double;
+  border-right: 1rem double;
+  padding: 2rem;
+}
+
+.cardsButton {
+  margin-bottom: 2rem;
+}
+
+/* ----------------------------------------------------------------- Packages CSS */
+
+/* ------------------------------------------------------Contact Grid Declaration */
+
+.contactUsGridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 2.7fr 0.1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "navBar"
+    "main"
+    "footer";
+}
+
+.navBar {
+  grid-area: navBar;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* ------------------------------------------------------Contact Grid Declaration */
+
+/* --------------------------------------------------------------- Contact Us CSS */
+
+
+.line {
+  border-radius: 1rem;
+}
+
+legend {
+text-align: center;
+}
+
+label {
+  font-size: 2rem;
+  color: white;
+}
+
+input[type="text"],
+select,
+textarea {
+font-size: 1.5rem;
+width: 100%;
+padding: 1.2rem;
+border: 0.2rem solid none;
+border-radius: 0.4rem;
+box-sizing: border-box;
+margin-top: 0.6rem;
+margin-bottom: 1.6rem;
+resize: vertical;
+}
+
+
+.formContainer {
+  border-radius: 1rem;
+  border-top: 0;
+  border-bottom: 0;
+  padding: 0.5rem;
+  background-color:rgb(254, 95, 85);
+  margin: 1rem;
+}
+
+.buttonsRow {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contactButton {
+  font-size: 2rem;
+  border-radius: 1rem;
+}
+
+/* --------------------------------------------------------------- Contact Us CSS */
